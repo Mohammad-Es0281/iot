@@ -13,11 +13,11 @@ import lombok.*;
 public class State {
     @Id
     private Long id;
-    private Long onn;
+    private Long on;
     private Long off;
 
     @Override
     public String toString() {
-        return "ON=" + onn + "&OFF=" + off;
+        return "ON=" + on + "&OFF=" + off;
     }
 }

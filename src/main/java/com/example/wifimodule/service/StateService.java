@@ -19,8 +19,6 @@ public class StateService {
     }
 
     public State getState() {
-        return stateRepository.findById(0L).orElse(
-                State.builder().id(0L).onn(DEFAULT_ON).off(DEFAULT_OFF).build()
-        );
+        return stateRepository.findById(0L).orElse(State.builder().id(0L).on(DEFAULT_ON).off(DEFAULT_OFF).build());
     }
 }
