@@ -20,7 +20,7 @@ public class StateController {
 
     @PostMapping("/state")
     public ResponseEntity<State> saveTime(@RequestBody StateDto dto) {
-        State state = State.builder().on(dto.getOn()).off(dto.getOff()).build();
+        State state = State.builder().onn(dto.getOn()).off(dto.getOff()).build();
         State savedState = stateService.saveState(state);
         return ResponseEntity.ok(savedState);
     }
